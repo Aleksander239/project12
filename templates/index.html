@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Прогноз погоды</title>
+</head>
+<body>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <h1>Введите начальную и конечную точку маршрута:</h1>
+    <form method="post">
+        <label for="start_city">Начальный город:</label><br>
+        <input type="text" id="start_city" name="start_city"><br><br>
+        <label for="end_city">Конечный город:</label><br>
+        <input type="text" id="end_city" name="end_city"><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
